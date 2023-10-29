@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
-
 import MovieCard from './movieCard.jsx';
-
 import './App.css';
-// import SearchIcon from './search.svg';
+import SearchIcon from './search_icon.svg';
 // 2553a587
 
 const movie1 = {
@@ -31,13 +29,13 @@ const App = () =>{
     }, []);
     return(
         <div className="app">
-            <h1>Movie Project</h1>
+            <h1>Movie API Project</h1>
 
             <div className="search">
                 <input placeholder='Search for movies'
                     value={searchTerm} 
                     onChange={(e) => setsearchTerm(e.target.value)}></input>
-                <img src='' alt="search" onClick={() => searchMovies(searchTerm)}></img>
+                <img src={SearchIcon} alt="search" onClick={() => searchMovies(searchTerm)}></img>
             </div>
 
             {
